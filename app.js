@@ -19,7 +19,11 @@ import { gradeRouter } from './routes/gradeRouter.js';
 })();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://anderson-grade-app.herokuapp.com/',
+  })
+);
 app.use(express.json());
 app.use(gradeRouter);
 
